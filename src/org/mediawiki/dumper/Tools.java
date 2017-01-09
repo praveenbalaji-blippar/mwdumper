@@ -35,7 +35,7 @@ public class Tools {
 	}
 
 	static InputStream openBZip2Stream(InputStream infile) throws IOException {
-		return new BZip2CompressorInputStream(infile);
+		return new MultiStreamBZip2InputStream(infile);
 	}
 
 	static OutputStream openStandardOutput() {
